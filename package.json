@@ -1,0 +1,57 @@
+{
+  "name": "@bee-coded/vtex-clients",
+  "version": "0.0.3",
+  "description": "Custom VTEX clients by BEE CODED",
+  "main": "build/index.js",
+  "scripts": {
+    "clean": "rimraf build/",
+    "lint": "tslint -c tslint.json './src/**/*.ts'",
+    "prepublish": "yarn build",
+    "build": "yarn clean & tsc",
+    "commit:patch": "npm version patch --no-git-tag-version --force",
+    "commit:minor": "npm version minor --no-git-tag-version --force",
+    "commit:major": "npm version major --no-git-tag-version --force",
+    "precommit": "yarn clean && yarn commit:patch && git add --all",
+    "postcommit": "gulp tag:commit && git push origin main && git status && gulp commit:done",
+    "commit": "git commit -m "
+  },
+  "dependencies": {
+    "@vtex/api": "6.45.15",
+    "@vtex/clients": "^2.21.0",
+    "class-validator": "^0.14.0",
+    "co-body": "^6.0.0",
+    "date-fns": "^2.29.3",
+    "ramda": "^0.25.0"
+  },
+  "devDependencies": {
+    "@types/node": "^12.12.21",
+    "@vtex/prettier-config": "^0.1.4",
+    "gulp": "^4.0.2",
+    "gulp-run": "^1.7.1",
+    "gulp-colors": "^1.0.0",
+    "gulp-git": "^2.8.0",
+    "eslint": "^7.12.1",
+    "eslint-config-vtex": "^12.3.2",
+    "husky": "^4.2.3",
+    "lint-staged": "^10.1.1",
+    "prettier": "^2.0.2",
+    "tslint": "^5.14.0",
+    "tslint-config-vtex": "^2.1.0",
+    "tslint-eslint-rules": "^5.4.0",
+    "@types/co-body": "^0.0.3",
+    "@types/jest": "^24.0.18",
+    "@types/ramda": "github:types/npm-ramda#dist",
+    "@vtex/tsconfig": "^0.5.6",
+    "typescript": "^4.9.5"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BEE-CODED/vtex.bcp-clients.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/BEE-CODED/vtex.bcp-clients/issues"
+  },
+  "homepage": "https://github.com/BEE-CODED/vtex.bcp-clients#readme"
+}

@@ -1,0 +1,9 @@
+{
+  "extends": "tslint-config-vtex",
+  "linterOptions": {
+    "exclude": [
+      "node_modules",
+      "**/*.d.ts"
+    ]
+  }
+}
