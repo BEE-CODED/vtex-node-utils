@@ -2610,7 +2610,7 @@ gulp-cli@^2.2.0:
     v8flags "^3.2.0"
     yargs "^7.1.0"
 
-gulp-colors@^1.2.2:
+gulp-colors@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/gulp-colors/-/gulp-colors-1.0.0.tgz#6a6b5ab1e12145749c43a2e88b2223a09cfd5bdd"
   integrity sha512-NGp/fWi7Ztr8gRi651MGsra4iCkXPtKIbvnYL2KhviV3N41+uXkIyUiCzcaXLZjR65X45aa8pfpCIH5KUAndsA==
@@ -2644,7 +2644,7 @@ gulp-run@^1.7.1:
     lodash.template "^4.0.2"
     vinyl "^0.4.6"
 
-gulp-util@^3.0.0, gulp-util@^3.0.6:
+gulp-util@^3.0.0, gulp-util@^3.0.6, gulp-util@^3.0.8:
   version "3.0.8"
   resolved "https://registry.yarnpkg.com/gulp-util/-/gulp-util-3.0.8.tgz#0054e1e744502e27c04c187c3ecc505dd54bbb4f"
   integrity sha512-q5oWPc12lwSFS9h/4VIjG+1NuNDlJ48ywV2JKItY4Ycc/n1fXJeYPVQsfu5ZrhQi7FGSDBalwUCLar/GyHXKGw==

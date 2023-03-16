@@ -1,6 +1,6 @@
 {
   "name": "@bee-coded/vtex-clients",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "Custom VTEX clients by BEE CODED",
   "main": "build/index.js",
   "scripts": {
@@ -30,6 +30,7 @@
     "gulp-run": "^1.7.1",
     "gulp-colors": "^1.0.0",
     "gulp-git": "^2.8.0",
+    "gulp-util": "^3.0.8",
     "eslint": "^7.12.1",
     "eslint-config-vtex": "^12.3.2",
     "husky": "^4.2.3",
