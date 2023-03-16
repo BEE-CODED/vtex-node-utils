@@ -1,6 +1,6 @@
 {
   "name": "@bee-coded/vtex-clients",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Custom VTEX clients by BEE CODED",
   "main": "build/index.js",
   "scripts": {
@@ -12,7 +12,7 @@
     "commit:minor": "npm version minor --no-git-tag-version --force",
     "commit:major": "npm version major --no-git-tag-version --force",
     "precommit": "yarn clean && yarn commit:patch && git add --all",
-    "postcommit": "gulp tag:commit && git push origin main && git status && gulp commit:done",
+    "postcommit": "gulp tag:commit && git push origin main && git status",
     "commit": "git commit -m "
   },
   "dependencies": {
