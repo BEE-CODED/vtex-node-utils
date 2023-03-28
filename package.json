@@ -1,6 +1,6 @@
 {
   "name": "@bee-coded/vtex-node-utils",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Custom VTEX node utils",
   "main": "build/index.js",
   "scripts": {
@@ -18,25 +18,25 @@
     "ramda": "^0.25.0"
   },
   "devDependencies": {
+    "@types/co-body": "^0.0.3",
+    "@types/jest": "^24.0.18",
     "@types/node": "^12.12.21",
+    "@types/ramda": "github:types/npm-ramda#dist",
     "@vtex/prettier-config": "^0.1.4",
-    "gulp": "^4.0.2",
-    "gulp-run": "^1.7.1",
-    "gulp-colors": "^1.0.0",
-    "gulp-git": "^2.8.0",
-    "gulp-util": "^3.0.8",
+    "@vtex/tsconfig": "^0.5.6",
     "eslint": "^7.12.1",
     "eslint-config-vtex": "^12.3.2",
+    "gulp": "^4.0.2",
+    "gulp-colors": "^1.0.0",
+    "gulp-git": "^2.8.0",
+    "gulp-run": "^1.7.1",
+    "gulp-util": "^3.0.8",
     "husky": "^4.2.3",
     "lint-staged": "^10.1.1",
     "prettier": "^2.0.2",
     "tslint": "^5.14.0",
     "tslint-config-vtex": "^2.1.0",
     "tslint-eslint-rules": "^5.4.0",
-    "@types/co-body": "^0.0.3",
-    "@types/jest": "^24.0.18",
-    "@types/ramda": "github:types/npm-ramda#dist",
-    "@vtex/tsconfig": "^0.5.6",
     "typescript": "^4.9.5"
   },
   "engines": {
