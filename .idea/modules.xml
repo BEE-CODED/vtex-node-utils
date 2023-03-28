@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/../vtex-locking/.idea/vtex-locking.iml" filepath="$PROJECT_DIR$/../vtex-locking/.idea/vtex-locking.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/vtex.bcp-clients.iml" filepath="$PROJECT_DIR$/.idea/vtex.bcp-clients.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/vtex-node-utils.iml" filepath="$PROJECT_DIR$/.idea/vtex-node-utils.iml" />
     </modules>
   </component>
 </project>

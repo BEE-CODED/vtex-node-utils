@@ -1,19 +1,13 @@
 {
-  "name": "@bee-coded/vtex-clients",
-  "version": "0.0.5",
-  "description": "Custom VTEX clients by BEE CODED",
+  "name": "@bee-coded/vtex-node-utils",
+  "version": "0.0.1",
+  "description": "Custom VTEX node utils",
   "main": "build/index.js",
   "scripts": {
     "clean": "rimraf build/",
     "lint": "tslint -c tslint.json './src/**/*.ts'",
-    "prepublish": "yarn build",
-    "build": "yarn clean & tsc",
-    "commit:patch": "npm version patch --no-git-tag-version --force",
-    "commit:minor": "npm version minor --no-git-tag-version --force",
-    "commit:major": "npm version major --no-git-tag-version --force",
-    "precommit": "yarn clean && yarn commit:patch && git add --all",
-    "postcommit": "gulp tag:commit && git push origin main && git status",
-    "commit": "git commit -m "
+    "prepare": "yarn build",
+    "build": "yarn clean & tsc"
   },
   "dependencies": {
     "@vtex/api": "6.45.15",
@@ -45,14 +39,17 @@
     "@vtex/tsconfig": "^0.5.6",
     "typescript": "^4.9.5"
   },
+  "engines": {
+    "node": "=12"
+  },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/BEE-CODED/vtex.bcp-clients.git"
+    "url": "git+https://github.com/BEE-CODED/vtex-node-utils.git"
   },
-  "author": "",
+  "author": "Bogdan Duda <bogdan@beecoded.ro>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/BEE-CODED/vtex.bcp-clients/issues"
+    "url": "https://github.com/BEE-CODED/vtex-node-utils/issues"
   },
-  "homepage": "https://github.com/BEE-CODED/vtex.bcp-clients#readme"
+  "homepage": "https://github.com/BEE-CODED/vtex-node-utils#readme"
 }
