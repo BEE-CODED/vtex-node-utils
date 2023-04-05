@@ -49,7 +49,7 @@ export class LoggerWrapper<T extends BaseContext> {
       ...context,
     }
 
-    this.vtexLogger.log(log, level)
+    this.vtexLogger.log(JSON.stringify(log), level)
     console[level](log)
   }
 }

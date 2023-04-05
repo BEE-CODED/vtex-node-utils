@@ -180,5 +180,8 @@ dist
 .yarn/install-state.gz
 .pnp.*
 
+# sources
+src/
+
 # do not ignore local build
 # build/
