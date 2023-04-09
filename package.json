@@ -15,7 +15,8 @@
     "class-validator": "^0.14.0",
     "co-body": "^6.0.0",
     "date-fns": "^2.29.3",
-    "ramda": "^0.25.0"
+    "ramda": "^0.25.0",
+    "winston": "^3.8.2"
   },
   "devDependencies": {
     "@types/co-body": "^0.0.3",
