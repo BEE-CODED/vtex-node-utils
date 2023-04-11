@@ -1,11 +1,7 @@
-import {IOContext, Logger, LogLevel} from '@vtex/api'
+import {Logger, LogLevel} from '@vtex/api'
 import TransportStream from 'winston-transport'
 
 declare global {
-  interface BaseContext {
-    vtex: IOContext
-  }
-
   interface LogInfo {
     level: 'debug'|'info'|'warn'|'error',
     message: string,
@@ -26,12 +22,11 @@ export class VtexTransport<T extends BaseContext> extends TransportStream {
   }
 
   public log(info: LogInfo, next: (err: any, result: any) => void) {
-    setImmediate(() => {
-      this.logger.log(info.toString(), this.mapLogLevel(info.level))
-      console.log('Logged', info)
-      this.emit('logged', info)
-      next(null, true)
-    })
+    // setImmediate(() => {
+      // @ts-ignore
+    this.logger.log(info[Symbol.for('message')], this.mapLogLevel(info[Symbol.for('level')]))
+    next(null, true)
+    // })
   }
 
   private mapLogLevel(level: LogInfo['level']): LogLevel {
