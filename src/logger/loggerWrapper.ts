@@ -25,7 +25,7 @@ export class LoggerWrapper<T extends BaseContext> {
         exitOnError: false,
         format: winston.format.json({circularValue: '[Circular]'}),
         level: options.level || 'info',
-        transports: [],
+        transports: options.transports || [],
       })
 
       if (options.enableConsole) {

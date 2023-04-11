@@ -7,6 +7,7 @@
     "clean": "rimraf build/",
     "lint": "tslint -c tslint.json './src/**/*.ts'",
     "prepare": "yarn build",
+    "prepublishOnly": "yarn lint && yarn test",
     "build": "yarn clean & tsc",
     "test": "jest"
   },

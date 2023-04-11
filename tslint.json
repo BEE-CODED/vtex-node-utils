@@ -3,7 +3,8 @@
   "linterOptions": {
     "exclude": [
       "node_modules",
-      "**/*.d.ts"
+      "**/*.d.ts",
+      "**/*.test.*"
     ]
   }
 }
