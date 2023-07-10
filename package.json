@@ -1,6 +1,6 @@
 {
   "name": "@bee-coded/vtex-node-utils",
-  "version": "0.0.7",
+  "version": "0.0.9",
   "description": "Custom VTEX node utils",
   "main": "build/index.js",
   "scripts": {
@@ -12,7 +12,7 @@
     "test": "jest"
   },
   "dependencies": {
-    "@vtex/api": "6.45.15",
+    "@vtex/api": "6.45.17",
     "@vtex/clients": "^2.21.0",
     "class-validator": "^0.14.0",
     "co-body": "^6.0.0",
