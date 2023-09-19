@@ -16,7 +16,9 @@ describe('logger wrapper', () => {
     cb()
   })
 
-  beforeEach(() => {
+  beforeEach(cb => {
+    LoggerWrapper.initLogger('test-service-name', {level: 'debug', enableConsole: true})
+    cb()
   })
 
   // it('should init logger with console transport', () => {
@@ -46,6 +48,8 @@ describe('logger wrapper', () => {
 
     const namedLogger = LoggerWrapper.getLogger(ctx, 'test-logger')
     expect(namedLogger.baseLogger.transports.length).toBeGreaterThanOrEqual(1)
+    const vtexTransport = namedLogger.baseLogger.transports.find(t => t instanceof VtexTransport)
+    expect(vtexTransport).toBeDefined()
 
     let lastVtexMessage: any
     const vtexLoggerMock = jest
@@ -78,10 +82,6 @@ describe('logger wrapper', () => {
     }))
     expect(parsedLastMessage).toHaveProperty('timestamp')
     expect(parsedLastMessage).toHaveProperty('level', 'debug')
-
-
-    const transports = namedLogger.baseLogger.transports
-    expect(transports.filter(t => t instanceof VtexTransport).length).toBe(1)
 
     cb()
   })

@@ -11,26 +11,22 @@ declare global {
   }
 }
 
-export class VtexTransport<T extends BaseContext> extends TransportStream {
-  private readonly ctx: T
-  private readonly logger: Logger
-  constructor(ctx: T, opts: TransportStream.TransportStreamOptions) {
+export class VtexTransport extends TransportStream {
+  constructor(private readonly logger: Logger, opts: TransportStream.TransportStreamOptions) {
     super(opts)
-
-    this.ctx = ctx
-    this.logger = ctx.vtex.logger
   }
 
-  public log(info: LogInfo, next: (err: any, result: any) => void) {
-    // setImmediate(() => {
-      // @ts-ignore
-    this.logger.log(info[Symbol.for('message')], this.mapLogLevel(info[Symbol.for('level')]))
+  public log(logInfo: LogInfo, next: (err: any, result: any) => void) {
+    setImmediate(() => {
+      this.emit('logged', logInfo)
+    })
+    // @ts-ignore
+    this.logger.log(logInfo[Symbol.for('message')] || logInfo.message, this.mapLogLevel(logInfo[Symbol.for('level') || logInfo.level]))
     next(null, true)
-    // })
   }
 
-  private mapLogLevel(level: LogInfo['level']): LogLevel {
-    switch (level) {
+  private mapLogLevel(logLevel: LogInfo['level']): LogLevel {
+    switch (logLevel) {
       case 'debug':
         return LogLevel.Debug
       case 'warn':
